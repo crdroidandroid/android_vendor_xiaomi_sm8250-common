@@ -651,7 +651,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss@2.1-service-qti.rc \
+    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-service.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc \
+    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc \
+    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.tidaservice@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.tidaservice@1.2-service.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf
 
 PRODUCT_PACKAGES += \
@@ -665,15 +668,30 @@ PRODUCT_PACKAGES += \
     libloc_socket \
     liblocationservice \
     liblocationservice_glue \
+    libmfido \
     libmlipay \
     libmlipay@1.1 \
+    libmt \
+    libmt@1.3 \
     libslimclient \
+    libtida@1.2 \
+    libwvkeybox \
     vendor.qti.gnss@4.0-service \
+    vendor.xiaomi.hardware.tidaservice@1.0 \
+    vendor.xiaomi.hardware.tidaservice@1.1 \
+    vendor.xiaomi.hardware.tidaservice@1.2 \
     SoterService \
+    FidoAuthen \
     android.hardware.gnss@2.1-service-qti.xml \
+    manifest_vendor.xiaomi.hardware.mfidoca.xml \
     manifest_vendor.xiaomi.hardware.mlipay.xml \
+    manifest_vendor.xiaomi.hardware.mtdservice.xml \
+    manifest_vendor.xiaomi.hardware.tidaservice.xml \
     vendor.qti.gnss@4.0-service.xml \
+    fidoca \
     android.hardware.gnss@2.1-service-qti \
     mlipayd@1.1 \
-    slim_daemon
+    mtd@1.3 \
+    slim_daemon \
+    tidad@1.2
 endif
