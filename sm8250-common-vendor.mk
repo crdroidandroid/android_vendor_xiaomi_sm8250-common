@@ -167,8 +167,10 @@ PRODUCT_PACKAGES += \
     libOpenCL \
     libVkLayer_q3dtools \
     libadreno_utils \
+    libadsp_default_listener \
     libadsprpc \
     libc2d30_bltlib \
+    libcdsp_default_listener \
     libcdsprpc \
     libdiag \
     libfastcvdsp_stub \
@@ -324,7 +326,6 @@ PRODUCT_PACKAGES += \
     libQTEEConnector_vendor \
     libSecureUILib \
     libStDrvInt \
-    libadsp_default_listener \
     libaoa \
     libasn1cper \
     libasn1crt \
@@ -333,7 +334,6 @@ PRODUCT_PACKAGES += \
     libcacertclient \
     libcdfw \
     libcdfw_remote_api \
-    libcdsp_default_listener \
     libcdsprpc_system \
     libclient2slpi.notifier \
     libcne \
