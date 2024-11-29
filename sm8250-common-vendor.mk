@@ -604,7 +604,6 @@ PRODUCT_PACKAGES += \
     loc_launcher \
     lowi-server \
     mdm_helper \
-    mi_thermald \
     mlid \
     msm_irqbalance \
     netmgrd \

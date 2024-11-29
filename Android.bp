@@ -7866,23 +7866,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "mi_thermald",
-	owner: "xiaomi",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/bin/mi_thermald"],
-			shared_libs: ["libcutils", "liblog", "libcrypto", "libssl", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
 	name: "mlid",
 	owner: "xiaomi",
 	target: {
