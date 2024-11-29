@@ -609,7 +609,6 @@ PRODUCT_PACKAGES += \
     netmgrd \
     nn_device_test \
     npu_launcher \
-    nv_mac \
     pd-mapper \
     pm-proxy \
     pm-service \
