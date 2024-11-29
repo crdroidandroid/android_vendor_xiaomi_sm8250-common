@@ -444,6 +444,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libhta_hexagon_runtime",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libhta_hexagon_runtime.so"],
+			shared_libs: ["liblog", "libcdsprpc", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libhta_hexagon_runtime.so"],
+			shared_libs: ["liblog", "libcdsprpc", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libllvm-glnext",
 	owner: "xiaomi",
 	strip: {
@@ -499,6 +520,27 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libmdsprpc.so"],
 			shared_libs: ["libhidlbase", "libhardware", "libutils", "vendor.qti.hardware.dsp@1.0", "liblog", "libc", "libcutils", "libion", "libc++", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libnpu",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libnpu.so"],
+			shared_libs: ["liblog", "libcdsprpc", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libnpu.so"],
+			shared_libs: ["liblog", "libcdsprpc", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -772,6 +814,27 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libvpplibrary.so"],
 			shared_libs: ["libhidlbase", "libutils", "vendor.qti.hardware.capabilityconfigstore@1.0", "libcutils", "liblog", "libqdMetaData", "libion", "libvpphvx", "libcdsprpc", "libvpphcp", "libC2D2", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "unnhal-acc-hta",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/unnhal-acc-hta.so"],
+			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/unnhal-acc-hta.so"],
+			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -3317,14 +3380,14 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libhta_hexagon_runtime",
+	name: "libhta",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libhta_hexagon_runtime.so"],
+			srcs: ["proprietary/vendor/lib64/libhta.so"],
 			shared_libs: ["liblog", "libcdsprpc", "libc", "libm", "libdl", ],
 		},
 	},
@@ -4892,23 +4955,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/unnhal-acc-common.so"],
 			shared_libs: ["libbase", "libhardware", "libhidlbase", "libhidlmemory", "libui", "liblog", "libnativewindow", "libutils", "libcutils", "libfmq", "android.hardware.neuralnetworks@1.0", "android.hardware.neuralnetworks@1.1", "android.hardware.neuralnetworks@1.2", "android.hardware.neuralnetworks@1.3", "android.hidl.safe_union@1.0", "android.hidl.allocator@1.0", "android.hidl.memory@1.0", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "unnhal-acc-hta",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/unnhal-acc-hta.so"],
-			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -7877,6 +7923,40 @@ cc_prebuilt_binary {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/netmgrd"],
 			shared_libs: ["libdsutils", "libconfigdb", "libdiag", "libcutils", "liblog", "libnetutils", "librmnetctl", "libnlnetmgr", "libnetmgr", "libnetmgr_common", "libqmiservices", "libqmi_common_so", "libqmi_cci", "libqmi_client_qmux", "libqmi_client_helper", "libqmi", "libutils", "libhidlbase", "libandroid_net", "android.system.net.netd@1.1", "libqti_vndfwk_detect", "libcneapiclient", "libbinder", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "nn_device_test",
+	owner: "xiaomi",
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/nn_device_test"],
+			shared_libs: ["libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "npu_launcher",
+	owner: "xiaomi",
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/npu_launcher"],
+			shared_libs: ["libutils", "liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
