@@ -542,6 +542,9 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.citsensorservice@1.1 \
     capi_v2_aptX_CLHDADV_Encoder \
     capi_v2_aptX_CLHDAD_Speech_Decoder \
+    libcamera_algoup_jni.xiaomi \
+    libcamera_mianode_jni.xiaomi \
+    vendor.xiaomi.hardware.campostproc@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
     com.qualcomm.qti.wifidisplayhal@1.0 \
     lib-imsvideocodec \
@@ -555,6 +558,7 @@ PRODUCT_PACKAGES += \
     libdpmtcm \
     libimscamera_jni \
     libimsmedia_jni \
+    libmicampostproc_client \
     libmmosal \
     libmmparser_lite \
     libmmrtpdecoder \
@@ -585,6 +589,7 @@ PRODUCT_PACKAGES += \
     CneApp \
     IWlanService \
     TimeService \
+    MiuiScanner \
     PowerOffAlarm \
     QtiTelephonyService \
     WfdService \
