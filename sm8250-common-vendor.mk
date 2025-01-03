@@ -34,8 +34,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8250-common/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/xiaomi/sm8250-common/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/cne/SwimConfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/SwimConfig.xml \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/cne/andsfCne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/andsfCne.xml \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
@@ -124,7 +122,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base-arm.policy \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext-arm.policy \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/seccomp_policy/qti-systemd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qti-systemd.policy \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/seccomp_policy/wifidisplayhalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wifidisplayhalservice.policy \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
@@ -512,7 +509,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.internal.deviceinfo@1.0 \
     vendor.qti.hardware.radio.lpa@1.0 \
     vendor.qti.hardware.radio.lpa@1.1 \
-    vendor.qti.hardware.radio.lpa@1.2 \
     vendor.qti.hardware.radio.qcrilhook@1.0 \
     vendor.qti.hardware.radio.qtiradio@1.0 \
     vendor.qti.hardware.radio.qtiradio@2.0 \
@@ -530,14 +526,14 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.slmadapter@1.0 \
     vendor.qti.hardware.soter@1.0 \
     vendor.qti.hardware.tui_comm@1.0 \
-    vendor.qti.ims.callcapability@1.0_vendor \
-    vendor.qti.ims.callinfo@1.0_vendor \
-    vendor.qti.ims.factory@1.0_vendor \
-    vendor.qti.ims.factory@1.1_vendor \
-    vendor.qti.ims.rcsconfig@1.0_vendor \
-    vendor.qti.ims.rcsconfig@1.1_vendor \
-    vendor.qti.ims.rcsconfig@2.0_vendor \
-    vendor.qti.ims.rcsconfig@2.1_vendor \
+    vendor.qti.ims.callcapability@1.0 \
+    vendor.qti.ims.callinfo@1.0 \
+    vendor.qti.ims.factory@1.0 \
+    vendor.qti.ims.factory@1.1 \
+    vendor.qti.ims.rcsconfig@1.0 \
+    vendor.qti.ims.rcsconfig@1.1 \
+    vendor.qti.ims.rcsconfig@2.0 \
+    vendor.qti.ims.rcsconfig@2.1 \
     vendor.qti.imsrtpservice@3.0-service-Impl \
     vendor.qti.imsrtpservice@3.0_vendor \
     vendor.qti.latency@2.0 \
@@ -584,17 +580,11 @@ PRODUCT_PACKAGES += \
     libwfduibcsinkinterface \
     libwfduibcsrc \
     libwfduibcsrcinterface \
+    vendor.qti.ImsRtpService-V1-ndk \
     vendor.qti.diaghal@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0 \
-    vendor.qti.ims.callcapability@1.0 \
-    vendor.qti.ims.callinfo@1.0 \
-    vendor.qti.ims.factory@1.0 \
-    vendor.qti.ims.factory@1.1 \
-    vendor.qti.ims.rcsconfig@1.0 \
-    vendor.qti.ims.rcsconfig@1.1 \
-    vendor.qti.ims.rcsconfig@2.0 \
-    vendor.qti.ims.rcsconfig@2.1 \
     vendor.qti.imsrtpservice@3.0 \
+    vendor.qti.imsrtpservice@3.1 \
     CACertService \
     CneApp \
     IWlanService \
@@ -603,7 +593,6 @@ PRODUCT_PACKAGES += \
     MiuiScanner \
     PowerOffAlarm \
     QtiTelephonyService \
-    imssettings \
     WfdService \
     ims \
     qcrilmsgtunnel \
@@ -655,7 +644,6 @@ PRODUCT_PACKAGES += \
     loc_launcher \
     lowi-server \
     mdm_helper \
-    mdm_helper_proxy \
     mlid \
     msm_irqbalance \
     netmgrd \
