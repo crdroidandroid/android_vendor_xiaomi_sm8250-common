@@ -113,7 +113,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/xiaomi/sm8250-common/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
